@@ -1,0 +1,286 @@
+/* ==============================
+   Trainers Page Styles
+   ============================== */
+
+.trainers {
+  padding-top: var(--nav-h);
+}
+
+.trainers-hero {
+  padding: 60px 0 80px;
+}
+
+.trainers-hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.trainers-hero__title {
+  font-size: clamp(48px, 5vw, 80px);
+  margin-top: 32px;
+}
+
+.trainers-hero__desc {
+  font-size: 20px;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin: 40px 0;
+}
+
+.trainers-hero__stats {
+  display: flex;
+  gap: 48px;
+}
+
+.trainers-hero__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.trainers-hero__stat-num {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--terracotta);
+  line-height: 1;
+}
+
+.trainers-hero__stat-label {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Trainer list */
+.trainer-list {
+  padding-top: 64px;
+  padding-bottom: 100px;
+}
+
+.trainer-list__grid {
+  display: flex;
+  gap: 0;
+  justify-content: space-evenly;
+}
+
+.trainer-list__row {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.team {
+  padding: 80px 0;
+}
+
+.team__title {
+  font-size: clamp(36px, 3.5vw, 48px);
+  margin-bottom: 40px;
+  font-family: var(--font-display);
+  font-weight: 300;
+  color: var(--dark);
+}
+
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.team-card {
+  padding: 32px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.team-card__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(200, 120, 90, 0.15);
+  color: var(--terracotta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-family: var(--font-display);
+}
+.team-card__role {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.team-card__name {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family: var(--font-display);
+  font-weight: 300;
+}
+
+.team-card__bio {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.team-card__tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--terracotta);
+}
+
+.cta {
+  background: var(--charcoal);
+  color: #fff;
+  padding: 80px 0;
+  margin-top: 80px;
+}
+
+.cta__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cta__title {
+  font-family: var(--font-display);
+  font-weight: 300;
+  line-height: 1.1;
+  font-size: 52px;
+}
+
+.cta__title .italic {
+  font-style: italic;
+  color: var(--terracotta);
+}
+
+.cta__desc {
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.cta__btn {
+  background: var(--terracotta);
+  border: none;
+  color: var(--cream);
+  padding: 14px 32px;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  white-space: nowrap;
+  transition: background 0.2s ease;
+  border-radius: 1px;
+}
+
+.cta__btn:hover {
+  opacity: 0.85;
+}
+
+/* =====================
+   MOBILE: Trainers Page
+   ===================== */
+
+@media screen and (max-width: 575px) {
+  .trainers-hero {
+    padding: 40px 0 48px;
+  }
+
+  .trainers-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .trainers-hero__title {
+    font-size: 40px;
+    margin-top: 16px;
+  }
+
+  .trainers-hero__desc {
+    font-size: 15px;
+    margin: 24px 0;
+  }
+
+  .trainers-hero__stats {
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+
+  .trainers-hero__stat-num {
+    font-size: 28px;
+  }
+
+  /* Trainer list */
+  .trainer-list {
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
+
+  .trainer-list__grid {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .trainer-list__row {
+    padding: 32px 0;
+  }
+
+  /* Team grid: 2 cols */
+  .team {
+    padding: 40px 0;
+  }
+
+  .team__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-card {
+    padding: 20px 16px;
+  }
+
+  .team-card__avatar {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .team-card__name {
+    font-size: 14px;
+  }
+
+  .team-card__bio {
+    font-size: 12px;
+  }
+
+  /* CTA */
+  .cta {
+    padding: 48px 0;
+    margin-top: 40px;
+  }
+
+  .cta__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  .cta__title {
+    font-size: 36px;
+  }
+
+  .cta__btn {
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+  }
+}
